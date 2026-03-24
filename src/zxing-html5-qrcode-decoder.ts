@@ -78,6 +78,7 @@ export class ZXingHtml5QrcodeDecoder implements QrcodeDecoderAsync {
         hints.set(ZXing.DecodeHintType.POSSIBLE_FORMATS, formats);
         // TODO(minhazav): Make this configurable by developers.
         hints.set(ZXing.DecodeHintType.TRY_HARDER, false);
+        hints.set(ZXing.DecodeHintType.ALLOWED_LENGTHS, [4, 6, 8, 10, 12, 14, 16, 18]);
         this.hints = hints;
     }
 
